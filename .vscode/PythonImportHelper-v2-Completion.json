@@ -1,0 +1,366 @@
+[
+    {
+        "label": "MongoClient",
+        "importPath": "pymongo.mongo_client",
+        "description": "pymongo.mongo_client",
+        "isExtraImport": true,
+        "detail": "pymongo.mongo_client",
+        "documentation": {}
+    },
+    {
+        "label": "ServerApi",
+        "importPath": "pymongo.server_api",
+        "description": "pymongo.server_api",
+        "isExtraImport": true,
+        "detail": "pymongo.server_api",
+        "documentation": {}
+    },
+    {
+        "label": "BaseModel",
+        "importPath": "pydantic",
+        "description": "pydantic",
+        "isExtraImport": true,
+        "detail": "pydantic",
+        "documentation": {}
+    },
+    {
+        "label": "APIRouter",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "APIRouter",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "FastAPI",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "BlogModel",
+        "importPath": "models.blog",
+        "description": "models.blog",
+        "isExtraImport": true,
+        "detail": "models.blog",
+        "documentation": {}
+    },
+    {
+        "label": "blog_collection",
+        "importPath": "config.config",
+        "description": "config.config",
+        "isExtraImport": true,
+        "detail": "config.config",
+        "documentation": {}
+    },
+    {
+        "label": "DecodeBlogs",
+        "importPath": "serializes.blog",
+        "description": "serializes.blog",
+        "isExtraImport": true,
+        "detail": "serializes.blog",
+        "documentation": {}
+    },
+    {
+        "label": "DecodeBlog",
+        "importPath": "serializes.blog",
+        "description": "serializes.blog",
+        "isExtraImport": true,
+        "detail": "serializes.blog",
+        "documentation": {}
+    },
+    {
+        "label": "ObjectId",
+        "importPath": "bson",
+        "description": "bson",
+        "isExtraImport": true,
+        "detail": "bson",
+        "documentation": {}
+    },
+    {
+        "label": "datetime",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "datetime",
+        "description": "datetime",
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "runpy",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "runpy",
+        "description": "runpy",
+        "detail": "runpy",
+        "documentation": {}
+    },
+    {
+        "label": "annotations",
+        "importPath": "__future__",
+        "description": "__future__",
+        "isExtraImport": true,
+        "detail": "__future__",
+        "documentation": {}
+    },
+    {
+        "label": "os",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "os",
+        "description": "os",
+        "detail": "os",
+        "documentation": {}
+    },
+    {
+        "label": "site",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "site",
+        "description": "site",
+        "detail": "site",
+        "documentation": {}
+    },
+    {
+        "label": "sys",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "sys",
+        "description": "sys",
+        "detail": "sys",
+        "documentation": {}
+    },
+    {
+        "label": "entry_root",
+        "importPath": "routes.entry",
+        "description": "routes.entry",
+        "isExtraImport": true,
+        "detail": "routes.entry",
+        "documentation": {}
+    },
+    {
+        "label": "blog_root",
+        "importPath": "routes.blog",
+        "description": "routes.blog",
+        "isExtraImport": true,
+        "detail": "routes.blog",
+        "documentation": {}
+    },
+    {
+        "label": "uri",
+        "kind": 5,
+        "importPath": "config.config",
+        "description": "config.config",
+        "peekOfCode": "uri = \"mongodb+srv://pythonBloging:89C8hdqOmuA5W5IS@cluster0.uo3rphs.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0\"\n# Create a new client and connect to the server\nclient = MongoClient(uri, server_api=ServerApi(\"1\"))\n# create database\ndb = client.blogging\nblog_collection = db[\"blogs\"]\n# Send a ping to confirm a successful connection\ntry:\n    client.admin.command(\"ping\")\n    print(\"Pinged your deployment. You successfully connected to MongoDB!\")",
+        "detail": "config.config",
+        "documentation": {}
+    },
+    {
+        "label": "client",
+        "kind": 5,
+        "importPath": "config.config",
+        "description": "config.config",
+        "peekOfCode": "client = MongoClient(uri, server_api=ServerApi(\"1\"))\n# create database\ndb = client.blogging\nblog_collection = db[\"blogs\"]\n# Send a ping to confirm a successful connection\ntry:\n    client.admin.command(\"ping\")\n    print(\"Pinged your deployment. You successfully connected to MongoDB!\")\nexcept Exception as e:\n    print(e)",
+        "detail": "config.config",
+        "documentation": {}
+    },
+    {
+        "label": "db",
+        "kind": 5,
+        "importPath": "config.config",
+        "description": "config.config",
+        "peekOfCode": "db = client.blogging\nblog_collection = db[\"blogs\"]\n# Send a ping to confirm a successful connection\ntry:\n    client.admin.command(\"ping\")\n    print(\"Pinged your deployment. You successfully connected to MongoDB!\")\nexcept Exception as e:\n    print(e)",
+        "detail": "config.config",
+        "documentation": {}
+    },
+    {
+        "label": "blog_collection",
+        "kind": 5,
+        "importPath": "config.config",
+        "description": "config.config",
+        "peekOfCode": "blog_collection = db[\"blogs\"]\n# Send a ping to confirm a successful connection\ntry:\n    client.admin.command(\"ping\")\n    print(\"Pinged your deployment. You successfully connected to MongoDB!\")\nexcept Exception as e:\n    print(e)",
+        "detail": "config.config",
+        "documentation": {}
+    },
+    {
+        "label": "BlogModel",
+        "kind": 6,
+        "importPath": "models.blog",
+        "description": "models.blog",
+        "peekOfCode": "class BlogModel(BaseModel):\n    title: str\n    subtitle: str\n    content: str\n    author: str\n    tags: list",
+        "detail": "models.blog",
+        "documentation": {}
+    },
+    {
+        "label": "NewBlog",
+        "kind": 2,
+        "importPath": "routes.blog",
+        "description": "routes.blog",
+        "peekOfCode": "def NewBlog(doc: BlogModel):\n    doc = dict(doc)\n    current_date = datetime.date.today()\n    doc[\"date\"] = str(current_date)\n    res = blog_collection.insert_one(doc)\n    doc_id = str(res.inserted_id)\n    return {\n        \"status\": \"ok\",\n        \"message\": \"Blog created successfully\",\n        \"id\": doc_id",
+        "detail": "routes.blog",
+        "documentation": {}
+    },
+    {
+        "label": "allBlogs",
+        "kind": 2,
+        "importPath": "routes.blog",
+        "description": "routes.blog",
+        "peekOfCode": "def allBlogs():\n    res = blog_collection.find()\n    decoded_data = DecodeBlogs(res)\n    return {\n        \"status\": \"ok\",\n        \"blogs\": decoded_data\n    }\n# single blog\n@blog_root.get(\"/blog/{_id}\")\ndef getBlog(_id):",
+        "detail": "routes.blog",
+        "documentation": {}
+    },
+    {
+        "label": "getBlog",
+        "kind": 2,
+        "importPath": "routes.blog",
+        "description": "routes.blog",
+        "peekOfCode": "def getBlog(_id):\n    res = blog_collection.find_one({\"_id\": ObjectId(_id)})\n    Decode_data = DecodeBlog(res)\n    return {\n        \"status\": \"ok\",\n        \"blog\": Decode_data\n    }",
+        "detail": "routes.blog",
+        "documentation": {}
+    },
+    {
+        "label": "blog_root",
+        "kind": 5,
+        "importPath": "routes.blog",
+        "description": "routes.blog",
+        "peekOfCode": "blog_root = APIRouter()\n# post request to the server\n@blog_root.post(\"/blog/new\")\ndef NewBlog(doc: BlogModel):\n    doc = dict(doc)\n    current_date = datetime.date.today()\n    doc[\"date\"] = str(current_date)\n    res = blog_collection.insert_one(doc)\n    doc_id = str(res.inserted_id)\n    return {",
+        "detail": "routes.blog",
+        "documentation": {}
+    },
+    {
+        "label": "apiGet",
+        "kind": 2,
+        "importPath": "routes.entry",
+        "description": "routes.entry",
+        "peekOfCode": "def apiGet():\n    res = {\n        \"status\": \"Running\",\n        \"message\": \"API is running successfully.\"\n    }\n    return res",
+        "detail": "routes.entry",
+        "documentation": {}
+    },
+    {
+        "label": "entry_root",
+        "kind": 5,
+        "importPath": "routes.entry",
+        "description": "routes.entry",
+        "peekOfCode": "entry_root = APIRouter()\n@entry_root.get(\"/\")\ndef apiGet():\n    res = {\n        \"status\": \"Running\",\n        \"message\": \"API is running successfully.\"\n    }\n    return res",
+        "detail": "routes.entry",
+        "documentation": {}
+    },
+    {
+        "label": "DecodeBlog",
+        "kind": 2,
+        "importPath": "serializes.blog",
+        "description": "serializes.blog",
+        "peekOfCode": "def DecodeBlog(doc) -> dict:\n    return {\n        \"_id\": str(doc[\"_id\"]),\n        \"title\": doc[\"title\"],\n        \"subtitle\": doc[\"subtitle\"],\n        \"content\": doc[\"content\"],\n        \"author\": doc[\"author\"],\n        \"date\": doc[\"date\"]\n    }\n# all doc",
+        "detail": "serializes.blog",
+        "documentation": {}
+    },
+    {
+        "label": "DecodeBlogs",
+        "kind": 2,
+        "importPath": "serializes.blog",
+        "description": "serializes.blog",
+        "peekOfCode": "def DecodeBlogs(docs) -> list:\n    return [DecodeBlog(doc) for doc in docs]",
+        "detail": "serializes.blog",
+        "documentation": {}
+    },
+    {
+        "label": "bin_dir",
+        "kind": 5,
+        "importPath": "venv.Scripts.activate_this",
+        "description": "venv.Scripts.activate_this",
+        "peekOfCode": "bin_dir = os.path.dirname(abs_file)\nbase = bin_dir[: -len('Scripts') - 1]  # strip away the bin part from the __file__, plus the path separator\n# prepend bin to PATH (this file is inside the bin directory)\nos.environ[\"PATH\"] = os.pathsep.join([bin_dir, *os.environ.get(\"PATH\", \"\").split(os.pathsep)])\nos.environ[\"VIRTUAL_ENV\"] = base  # virtual env is right above bin directory\nos.environ[\"VIRTUAL_ENV_PROMPT\"] = '' or os.path.basename(base)\n# add the virtual environments libraries to the host python import mechanism\nprev_length = len(sys.path)\nfor lib in '..\\\\Lib\\\\site-packages'.split(os.pathsep):\n    path = os.path.realpath(os.path.join(bin_dir, lib))",
+        "detail": "venv.Scripts.activate_this",
+        "documentation": {}
+    },
+    {
+        "label": "base",
+        "kind": 5,
+        "importPath": "venv.Scripts.activate_this",
+        "description": "venv.Scripts.activate_this",
+        "peekOfCode": "base = bin_dir[: -len('Scripts') - 1]  # strip away the bin part from the __file__, plus the path separator\n# prepend bin to PATH (this file is inside the bin directory)\nos.environ[\"PATH\"] = os.pathsep.join([bin_dir, *os.environ.get(\"PATH\", \"\").split(os.pathsep)])\nos.environ[\"VIRTUAL_ENV\"] = base  # virtual env is right above bin directory\nos.environ[\"VIRTUAL_ENV_PROMPT\"] = '' or os.path.basename(base)\n# add the virtual environments libraries to the host python import mechanism\nprev_length = len(sys.path)\nfor lib in '..\\\\Lib\\\\site-packages'.split(os.pathsep):\n    path = os.path.realpath(os.path.join(bin_dir, lib))\n    site.addsitedir(path.decode(\"utf-8\") if '' else path)",
+        "detail": "venv.Scripts.activate_this",
+        "documentation": {}
+    },
+    {
+        "label": "os.environ[\"PATH\"]",
+        "kind": 5,
+        "importPath": "venv.Scripts.activate_this",
+        "description": "venv.Scripts.activate_this",
+        "peekOfCode": "os.environ[\"PATH\"] = os.pathsep.join([bin_dir, *os.environ.get(\"PATH\", \"\").split(os.pathsep)])\nos.environ[\"VIRTUAL_ENV\"] = base  # virtual env is right above bin directory\nos.environ[\"VIRTUAL_ENV_PROMPT\"] = '' or os.path.basename(base)\n# add the virtual environments libraries to the host python import mechanism\nprev_length = len(sys.path)\nfor lib in '..\\\\Lib\\\\site-packages'.split(os.pathsep):\n    path = os.path.realpath(os.path.join(bin_dir, lib))\n    site.addsitedir(path.decode(\"utf-8\") if '' else path)\nsys.path[:] = sys.path[prev_length:] + sys.path[0:prev_length]\nsys.real_prefix = sys.prefix",
+        "detail": "venv.Scripts.activate_this",
+        "documentation": {}
+    },
+    {
+        "label": "os.environ[\"VIRTUAL_ENV\"]",
+        "kind": 5,
+        "importPath": "venv.Scripts.activate_this",
+        "description": "venv.Scripts.activate_this",
+        "peekOfCode": "os.environ[\"VIRTUAL_ENV\"] = base  # virtual env is right above bin directory\nos.environ[\"VIRTUAL_ENV_PROMPT\"] = '' or os.path.basename(base)\n# add the virtual environments libraries to the host python import mechanism\nprev_length = len(sys.path)\nfor lib in '..\\\\Lib\\\\site-packages'.split(os.pathsep):\n    path = os.path.realpath(os.path.join(bin_dir, lib))\n    site.addsitedir(path.decode(\"utf-8\") if '' else path)\nsys.path[:] = sys.path[prev_length:] + sys.path[0:prev_length]\nsys.real_prefix = sys.prefix\nsys.prefix = base",
+        "detail": "venv.Scripts.activate_this",
+        "documentation": {}
+    },
+    {
+        "label": "os.environ[\"VIRTUAL_ENV_PROMPT\"]",
+        "kind": 5,
+        "importPath": "venv.Scripts.activate_this",
+        "description": "venv.Scripts.activate_this",
+        "peekOfCode": "os.environ[\"VIRTUAL_ENV_PROMPT\"] = '' or os.path.basename(base)\n# add the virtual environments libraries to the host python import mechanism\nprev_length = len(sys.path)\nfor lib in '..\\\\Lib\\\\site-packages'.split(os.pathsep):\n    path = os.path.realpath(os.path.join(bin_dir, lib))\n    site.addsitedir(path.decode(\"utf-8\") if '' else path)\nsys.path[:] = sys.path[prev_length:] + sys.path[0:prev_length]\nsys.real_prefix = sys.prefix\nsys.prefix = base",
+        "detail": "venv.Scripts.activate_this",
+        "documentation": {}
+    },
+    {
+        "label": "prev_length",
+        "kind": 5,
+        "importPath": "venv.Scripts.activate_this",
+        "description": "venv.Scripts.activate_this",
+        "peekOfCode": "prev_length = len(sys.path)\nfor lib in '..\\\\Lib\\\\site-packages'.split(os.pathsep):\n    path = os.path.realpath(os.path.join(bin_dir, lib))\n    site.addsitedir(path.decode(\"utf-8\") if '' else path)\nsys.path[:] = sys.path[prev_length:] + sys.path[0:prev_length]\nsys.real_prefix = sys.prefix\nsys.prefix = base",
+        "detail": "venv.Scripts.activate_this",
+        "documentation": {}
+    },
+    {
+        "label": "sys.path[:]",
+        "kind": 5,
+        "importPath": "venv.Scripts.activate_this",
+        "description": "venv.Scripts.activate_this",
+        "peekOfCode": "sys.path[:] = sys.path[prev_length:] + sys.path[0:prev_length]\nsys.real_prefix = sys.prefix\nsys.prefix = base",
+        "detail": "venv.Scripts.activate_this",
+        "documentation": {}
+    },
+    {
+        "label": "sys.real_prefix",
+        "kind": 5,
+        "importPath": "venv.Scripts.activate_this",
+        "description": "venv.Scripts.activate_this",
+        "peekOfCode": "sys.real_prefix = sys.prefix\nsys.prefix = base",
+        "detail": "venv.Scripts.activate_this",
+        "documentation": {}
+    },
+    {
+        "label": "sys.prefix",
+        "kind": 5,
+        "importPath": "venv.Scripts.activate_this",
+        "description": "venv.Scripts.activate_this",
+        "peekOfCode": "sys.prefix = base",
+        "detail": "venv.Scripts.activate_this",
+        "documentation": {}
+    },
+    {
+        "label": "app",
+        "kind": 5,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "app = FastAPI()\napp.include_router(entry_root)\napp.include_router(blog_root)",
+        "detail": "main",
+        "documentation": {}
+    }
+]
