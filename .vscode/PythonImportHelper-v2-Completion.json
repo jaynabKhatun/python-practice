@@ -56,6 +56,14 @@
         "documentation": {}
     },
     {
+        "label": "UpdateBlogModel",
+        "importPath": "models.blog",
+        "description": "models.blog",
+        "isExtraImport": true,
+        "detail": "models.blog",
+        "documentation": {}
+    },
+    {
         "label": "blog_collection",
         "importPath": "config.config",
         "description": "config.config",
@@ -197,7 +205,16 @@
         "kind": 6,
         "importPath": "models.blog",
         "description": "models.blog",
-        "peekOfCode": "class BlogModel(BaseModel):\n    title: str\n    subtitle: str\n    content: str\n    author: str\n    tags: list",
+        "peekOfCode": "class BlogModel(BaseModel):\n    title: str\n    subtitle: str\n    content: str\n    author: str\n    tags: list\nclass UpdateBlogModel(BaseModel):\n    title: str = None\n    subtitle: str = None\n    content: str = None",
+        "detail": "models.blog",
+        "documentation": {}
+    },
+    {
+        "label": "UpdateBlogModel",
+        "kind": 6,
+        "importPath": "models.blog",
+        "description": "models.blog",
+        "peekOfCode": "class UpdateBlogModel(BaseModel):\n    title: str = None\n    subtitle: str = None\n    content: str = None\n    author: str = None\n    tags: list = None",
         "detail": "models.blog",
         "documentation": {}
     },
@@ -215,7 +232,7 @@
         "kind": 2,
         "importPath": "routes.blog",
         "description": "routes.blog",
-        "peekOfCode": "def allBlogs():\n    res = blog_collection.find()\n    decoded_data = DecodeBlogs(res)\n    return {\n        \"status\": \"ok\",\n        \"blogs\": decoded_data\n    }\n# single blog\n@blog_root.get(\"/blog/{_id}\")\ndef getBlog(_id):",
+        "peekOfCode": "def allBlogs():\n    res = blog_collection.find()\n    decoded_data = DecodeBlogs(res)\n    return {\n        \"status\": \"ok\",\n        \"blogs\": decoded_data\n    }\n# get single blog\n@blog_root.get(\"/blog/{_id}\")\ndef getBlog(_id):",
         "detail": "routes.blog",
         "documentation": {}
     },
@@ -224,7 +241,25 @@
         "kind": 2,
         "importPath": "routes.blog",
         "description": "routes.blog",
-        "peekOfCode": "def getBlog(_id):\n    res = blog_collection.find_one({\"_id\": ObjectId(_id)})\n    Decode_data = DecodeBlog(res)\n    return {\n        \"status\": \"ok\",\n        \"blog\": Decode_data\n    }",
+        "peekOfCode": "def getBlog(_id):\n    res = blog_collection.find_one({\"_id\": ObjectId(_id)})\n    Decode_data = DecodeBlog(res)\n    return {\n        \"status\": \"ok\",\n        \"blog\": Decode_data\n    }\n# update a single blog\n@blog_root.patch(\"/update/{_id}\")\ndef updateBlog(_id: str, doc: UpdateBlogModel):",
+        "detail": "routes.blog",
+        "documentation": {}
+    },
+    {
+        "label": "updateBlog",
+        "kind": 2,
+        "importPath": "routes.blog",
+        "description": "routes.blog",
+        "peekOfCode": "def updateBlog(_id: str, doc: UpdateBlogModel):\n    req = dict(doc.model_dump(exclude_unset=True))\n    blog_collection.find_one_and_update(\n        {\"_id\": ObjectId(_id)},\n        {\"$set\": req}\n    )\n    return {\n        \"status\": \"ok\",\n        \"message\": \"Blog updated successfully\"\n    }",
+        "detail": "routes.blog",
+        "documentation": {}
+    },
+    {
+        "label": "deletedBlog",
+        "kind": 2,
+        "importPath": "routes.blog",
+        "description": "routes.blog",
+        "peekOfCode": "def deletedBlog(_id: str):\n    blog_collection.find_one_and_delete(\n        {\"_id\": ObjectId(_id)}\n    )\n    return {\n        \"status\": \"ok\",\n        \"message\": \"Blog deleted successfully\"\n    }",
         "detail": "routes.blog",
         "documentation": {}
     },
